@@ -13,7 +13,7 @@ let getJohnProfile = () => {
   });
 };
 
-let getJohnOrders = () => {
+let getJohnOrders = async () => {
   return new Promise(function (resolve) {
     setTimeout(
       () =>
@@ -33,3 +33,7 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+let newGetJohnProfile = await getJohnProfile()
+console.log(newGetJohnProfile)
+let newGetJohnOrders = await getJohnOrders()
+console.log(newGetJohnOrders)
